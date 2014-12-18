@@ -5,7 +5,7 @@ parks = YAML.load(raw_data)
 
 result = {}
 parks.each do |park|
-  value =  park[:state],park[:country]
+  value =  "#{park[:state]}, #{park[:country]}"
   result[value] ||= []
   result[value] << park
 end
